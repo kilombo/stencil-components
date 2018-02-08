@@ -6,9 +6,9 @@ Inside /src/components/ you will find all the componens, the app-* are like page
 
 ## Components list
 
-# \<full-width-component\>
+## \<full-width-component\>
 This component is to create a full-width image block with a sentence inside.
 You can configure the title text, color and image background.
 
-# \<login-firebase\>
+## \<login-firebase\>
 Component to show a Firebase Login Form.
