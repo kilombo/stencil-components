@@ -1,0 +1,27 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.container{
+  display: block;
+}
+
+.hidden{
+  display: none !important;
+}
+
+paper-button{
+
+  &.blue{
+    color: white;
+    background-color: blue;
+  }
+
+}

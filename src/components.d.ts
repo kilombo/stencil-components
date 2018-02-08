@@ -6,6 +6,8 @@
 
 import '@stencil/router';
 
+import '@ionic/core';
+
 import {
   MatchResults,
 } from '@stencil/router';
