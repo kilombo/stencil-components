@@ -1,5 +1,5 @@
-import { Component, Prop } from '@stencil/core';
-import { MenuController } from '@ionic/core';
+import { Component } from '@stencil/core';
+// import { MenuController } from '@ionic/core';
 
 
 @Component({
@@ -8,10 +8,10 @@ import { MenuController } from '@ionic/core';
 })
 export class AppHome {
 
-  @Prop({ connect: 'ion-menu' }) menuCtrl: MenuController;
+  // @Prop({ connect: 'ion-menu' }) menuCtrl: MenuController;
 
   showMenu(){
-    this.menuCtrl.open();
+    // this.menuCtrl.open();
   }
 
   render() {
