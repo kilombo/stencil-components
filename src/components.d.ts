@@ -12,12 +12,21 @@ import {
   MatchResults,
 } from '@stencil/router';
 
+declare global {
+  interface HTMLStencilElement extends HTMLElement {
+    componentOnReady(): Promise<this>;
+    componentOnReady(done: (ele?: this) => void): void;
+  }
+}
+
+
+
 import {
   AppFullWidthComponent as AppFullWidthComponent
 } from './components/app-full-width-component/app-full-width-component';
 
 declare global {
-  interface HTMLAppFullWidthComponentElement extends AppFullWidthComponent, HTMLElement {
+  interface HTMLAppFullWidthComponentElement extends AppFullWidthComponent, HTMLStencilElement {
   }
   var HTMLAppFullWidthComponentElement: {
     prototype: HTMLAppFullWidthComponentElement;
@@ -47,7 +56,7 @@ import {
 } from './components/app-home/app-home';
 
 declare global {
-  interface HTMLAppHomeElement extends AppHome, HTMLElement {
+  interface HTMLAppHomeElement extends AppHome, HTMLStencilElement {
   }
   var HTMLAppHomeElement: {
     prototype: HTMLAppHomeElement;
@@ -77,7 +86,7 @@ import {
 } from './components/app-login-firebase/app-login-firebase';
 
 declare global {
-  interface HTMLAppLoginFirebaseElement extends AppLoginFirebase, HTMLElement {
+  interface HTMLAppLoginFirebaseElement extends AppLoginFirebase, HTMLStencilElement {
   }
   var HTMLAppLoginFirebaseElement: {
     prototype: HTMLAppLoginFirebaseElement;
@@ -103,11 +112,41 @@ declare global {
 
 
 import {
+  AppPostsFirestore as AppPostsFirestore
+} from './components/app-posts-firestore/app-posts-firestore';
+
+declare global {
+  interface HTMLAppPostsFirestoreElement extends AppPostsFirestore, HTMLStencilElement {
+  }
+  var HTMLAppPostsFirestoreElement: {
+    prototype: HTMLAppPostsFirestoreElement;
+    new (): HTMLAppPostsFirestoreElement;
+  };
+  interface HTMLElementTagNameMap {
+    "app-posts-firestore": HTMLAppPostsFirestoreElement;
+  }
+  interface ElementTagNameMap {
+    "app-posts-firestore": HTMLAppPostsFirestoreElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "app-posts-firestore": JSXElements.AppPostsFirestoreAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppPostsFirestoreAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
   AppProfile as AppProfile
 } from './components/app-profile/app-profile';
 
 declare global {
-  interface HTMLAppProfileElement extends AppProfile, HTMLElement {
+  interface HTMLAppProfileElement extends AppProfile, HTMLStencilElement {
   }
   var HTMLAppProfileElement: {
     prototype: HTMLAppProfileElement;
@@ -137,7 +176,7 @@ import {
 } from './components/contact-form/contact-form';
 
 declare global {
-  interface HTMLContactFormElement extends ContactForm, HTMLElement {
+  interface HTMLContactFormElement extends ContactForm, HTMLStencilElement {
   }
   var HTMLContactFormElement: {
     prototype: HTMLContactFormElement;
@@ -167,7 +206,7 @@ import {
 } from './components/full-width-component/full-width-component';
 
 declare global {
-  interface HTMLFullWidthComponentElement extends FullWidthComponent, HTMLElement {
+  interface HTMLFullWidthComponentElement extends FullWidthComponent, HTMLStencilElement {
   }
   var HTMLFullWidthComponentElement: {
     prototype: HTMLFullWidthComponentElement;
@@ -199,7 +238,7 @@ import {
 } from './components/login-firebase/login-firebase';
 
 declare global {
-  interface HTMLLoginFirebaseElement extends LoginFirebase, HTMLElement {
+  interface HTMLLoginFirebaseElement extends LoginFirebase, HTMLStencilElement {
   }
   var HTMLLoginFirebaseElement: {
     prototype: HTMLLoginFirebaseElement;
@@ -229,7 +268,7 @@ import {
 } from './components/my-app/my-app';
 
 declare global {
-  interface HTMLMyAppElement extends MyApp, HTMLElement {
+  interface HTMLMyAppElement extends MyApp, HTMLStencilElement {
   }
   var HTMLMyAppElement: {
     prototype: HTMLMyAppElement;
@@ -259,7 +298,7 @@ import {
 } from './components/posts-firestore/posts-firestore';
 
 declare global {
-  interface HTMLPostsFirestoreElement extends PostsFirestore, HTMLElement {
+  interface HTMLPostsFirestoreElement extends PostsFirestore, HTMLStencilElement {
   }
   var HTMLPostsFirestoreElement: {
     prototype: HTMLPostsFirestoreElement;
@@ -290,7 +329,7 @@ import {
 } from './components/social-links/social-links';
 
 declare global {
-  interface HTMLSocialLinksElement extends SocialLinks, HTMLElement {
+  interface HTMLSocialLinksElement extends SocialLinks, HTMLStencilElement {
   }
   var HTMLSocialLinksElement: {
     prototype: HTMLSocialLinksElement;
@@ -320,7 +359,7 @@ import {
 } from './components/social-twitter-link/social-twitter-link';
 
 declare global {
-  interface HTMLSocialTwitterLinkElement extends SocialTwitterLink, HTMLElement {
+  interface HTMLSocialTwitterLinkElement extends SocialTwitterLink, HTMLStencilElement {
   }
   var HTMLSocialTwitterLinkElement: {
     prototype: HTMLSocialTwitterLinkElement;
