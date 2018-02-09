@@ -16,10 +16,11 @@
     "test.watch": "jest --watch --no-cache"
   },
   "dependencies": {
-    "@stencil/core": "latest",
-    "@stencil/router": "latest",
     "@ionic/core": "0.0.2-48",
-    "firebase": "^4.8.1"
+    "@stencil/core": "0.2.3",
+    "@stencil/router": "latest",
+    "firebase": "^4.8.1",
+    "moment": "^2.20.1"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
