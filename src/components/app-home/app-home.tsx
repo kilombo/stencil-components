@@ -1,5 +1,5 @@
 import { Component, Prop } from '@stencil/core';
-import { Menu, MenuController, Nav } from '@ionic/core';
+import { MenuController } from '@ionic/core';
 
 
 @Component({
@@ -47,8 +47,13 @@ export class AppHome {
         <stencil-route-link url='/components/login-firebase'>
           <paper-button class="blue">login-firebase</paper-button>
         </stencil-route-link>
-<<<<<<< HEAD
+        <br/>
+        <stencil-route-link url='/components/posts-firestore'>
+          <paper-button class="blue">posts-firestore</paper-button>
+        </stencil-route-link>
+
         <paper-button onClick={() => this.showMenu()}>Show menu</paper-button>
+
         <ion-menu content="mycontent">
           <ion-content>
             <ion-list>
@@ -57,12 +62,7 @@ export class AppHome {
           </ion-content>
         </ion-menu>
         <ion-nav id="mycontent" root="rootPage"></ion-nav>
-=======
-        <br/>
-        <stencil-route-link url='/components/posts-firestore'>
-          <paper-button class="blue">posts-firestore</paper-button>
-        </stencil-route-link>
->>>>>>> master
+
       </div>
     );
   }
