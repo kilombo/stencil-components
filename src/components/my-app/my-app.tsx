@@ -27,6 +27,9 @@ export class MyApp {
 
             <stencil-route url='/components/login-firebase' component='app-login-firebase'>
             </stencil-route>
+
+            <stencil-route url='/components/posts-firestore' component='app-posts-firestore'>
+            </stencil-route>
           </stencil-router>
         </main>
       </div>

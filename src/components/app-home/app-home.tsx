@@ -15,6 +15,7 @@ export class AppHome {
   }
 
   render() {
+
     return (
       <div>
         <p>
@@ -23,8 +24,11 @@ export class AppHome {
           web components using Stencil!
           Check out our docs on <a href='https://stenciljs.com'>stenciljs.com</a> to get started.
         </p>
-        <h2>This is an example to use Polymer & Ionic Components on a Stencil App</h2>
 
+        <h2>Moment.js example</h2>
+        <p><momentjs-example></momentjs-example></p>
+
+        <h2>This is an example to use Polymer & Ionic Components on a Stencil App</h2>
         <a target="_blank" href="https://beta.webcomponents.org/element/convoo/social-links"><img alt="social-links" src="https://github.com/convoo/social-links/raw/master/Social-Links.png" width="200" /></a>
 
         <twitter-link href="https://www.twitter.com/@bkawk" height="15px" color="grey"></twitter-link>
@@ -43,6 +47,7 @@ export class AppHome {
         <stencil-route-link url='/components/login-firebase'>
           <paper-button class="blue">login-firebase</paper-button>
         </stencil-route-link>
+<<<<<<< HEAD
         <paper-button onClick={() => this.showMenu()}>Show menu</paper-button>
         <ion-menu content="mycontent">
           <ion-content>
@@ -52,6 +57,12 @@ export class AppHome {
           </ion-content>
         </ion-menu>
         <ion-nav id="mycontent" root="rootPage"></ion-nav>
+=======
+        <br/>
+        <stencil-route-link url='/components/posts-firestore'>
+          <paper-button class="blue">posts-firestore</paper-button>
+        </stencil-route-link>
+>>>>>>> master
       </div>
     );
   }
