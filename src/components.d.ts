@@ -264,6 +264,36 @@ declare global {
 
 
 import {
+  MomentjsExample as MomentjsExample
+} from './components/momentjs-example/momentjs-example';
+
+declare global {
+  interface HTMLMomentjsExampleElement extends MomentjsExample, HTMLStencilElement {
+  }
+  var HTMLMomentjsExampleElement: {
+    prototype: HTMLMomentjsExampleElement;
+    new (): HTMLMomentjsExampleElement;
+  };
+  interface HTMLElementTagNameMap {
+    "momentjs-example": HTMLMomentjsExampleElement;
+  }
+  interface ElementTagNameMap {
+    "momentjs-example": HTMLMomentjsExampleElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "momentjs-example": JSXElements.MomentjsExampleAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface MomentjsExampleAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
   MyApp as MyApp
 } from './components/my-app/my-app';
 

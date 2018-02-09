@@ -8,6 +8,7 @@ import { Component } from '@stencil/core';
 export class AppHome {
 
   render() {
+
     return (
       <div>
         <p>
@@ -16,8 +17,11 @@ export class AppHome {
           web components using Stencil!
           Check out our docs on <a href='https://stenciljs.com'>stenciljs.com</a> to get started.
         </p>
-        <h2>This is an example to use Polymer & Ionic Components on a Stencil App</h2>
 
+        <h2>Moment.js example</h2>
+        <p><momentjs-example></momentjs-example></p>
+
+        <h2>This is an example to use Polymer & Ionic Components on a Stencil App</h2>
         <a target="_blank" href="https://beta.webcomponents.org/element/convoo/social-links"><img alt="social-links" src="https://github.com/convoo/social-links/raw/master/Social-Links.png" width="200" /></a>
 
         <twitter-link href="https://www.twitter.com/@bkawk" height="15px" color="grey"></twitter-link>
