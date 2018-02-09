@@ -1,6 +1,6 @@
 import { Component, State, Prop } from '@stencil/core';
 import { LoadingController } from '@ionic/core';
-import { firestore } from 'firebase';
+import * as firebase from 'firebase';
 
 @Component({
   tag: 'posts-firestore',
