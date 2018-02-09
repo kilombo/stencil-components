@@ -9,7 +9,6 @@ export class MomentjsExample {
   @State() now: any;
 
   componentDidLoad() {
-    console.log('showing time');
     this.now = moment().format('LLLL');
   }
 
