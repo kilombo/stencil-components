@@ -30,7 +30,7 @@ export class LoginFirebase {
   doLogin() {
     console.log('doing login');
     firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-      .then((data) => {
+      .then(() => {
         this.userLogged = true;
       })
       .catch((error) => {

@@ -36,6 +36,10 @@ export class AppHome {
         <stencil-route-link url='/components/login-firebase'>
           <paper-button class="blue">login-firebase</paper-button>
         </stencil-route-link>
+        <br/>
+        <stencil-route-link url='/components/posts-firestore'>
+          <paper-button class="blue">posts-firestore</paper-button>
+        </stencil-route-link>
       </div>
     );
   }
